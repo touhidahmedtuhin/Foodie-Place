@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: green;
+    padding: 20px;
+}
+
+nav{
+    background-color: rgb(8, 83, 8);
+    display: grid;
+    place-items: center;
+}
+
+ul li{
+    list-style: none;
+}
+
+nav ul a {
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease-in;
+    font-size: 19px;
+}
+
+nav ul a:hover {
+    color: yellow;
+}
+
+.items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 20px;
+    column-gap: 20px;
+    row-gap: 30px;
+}
+
+.item img{
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.item img:hover{
+    transform: scale(1.04);
+}
+
+.item h4{
+    padding: 5px;
+    text-align: center;
+}
+
+.item button{
+    padding: 5px 30px;
+    border: none;
+    outline: none;
+    background-color:  rgb(7, 173, 7);
+    border-radius: 4px;
+    color: white;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s all; 
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.item button:hover{
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 786px) {
+    .items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
